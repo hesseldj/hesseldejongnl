@@ -3,31 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    --hdj-black: rgb(0, 0, 0, 0.85);
+    --hdj-white: rgb(255, 255, 255, 0.9);
+    --hdj-gray: rgba(26, 26, 26, 0.8);
+    --hdj-bg: rgb(245, 245, 245);
+    --hdj-primary: rgb(56, 53, 120);
+    --hdj-primary-faded: rgb(56, 53, 120, 0.08);
+    --hdj-secondary: rgb(255, 211, 104);
+    --hdj-secondary-faded: rgb(255, 211, 104, 0.08);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+    background: var(--hdj-bg);
+    color: var(--hdj-black);
+    font-family: var(--font-lato);
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--hdj-primary);
+        font-family: var(--font-lato);
+    }
+
+    p, a, li {
+        font-family: var(--font-lato);
+        color: var(--hdj-black);
+    }
 }
