@@ -3,6 +3,7 @@ import Education from '../components/Education';
 import Projects from '../components/Projects';
 import React from "react";
 import {getWrittenTimeDifference} from "../utils/date";
+import Tools from '../components/Tools';
 
 const jobs = [
     {
@@ -10,65 +11,96 @@ const jobs = [
         role: 'Full Stack Developer & Product Designer',
         startDate: '2022-01',
         endDate: null,
-        description: 'Mede-oprichter van een privacyvriendelijke WordPress analytics-plugin, gebruikt op 300.000+ websites. Ontwikkeling in Figma, React, SCSS, SQL, PHP met focus op UX en database-optimalisatie.',
+        description: 'Mede-oprichter van een WordPress analytics-plugin die privacy hoog in het vaandel heeft en momenteel op 300.000+ websites wordt gebruikt. Ontwierp gebruiksvriendelijke interfaces die intuïtief aanvoelen en zorgden voor betere gebruikerservaringen. Optimaliseerde de database en prestaties zodat de plugin naadloos werkt, ongeacht de WordPress-configuratie van de gebruiker. Geïmplementeerd GEO IP databases en automatische build-processen met bash scripts en SSH.',
         type: 'Part-time',
-        tags: ['React', 'JS', 'PHP', 'SQL', 'HTML', 'SCSS', 'Figma'],
+        tags: {
+            frontend: ['React', 'React Query', 'HTML', 'SCSS'],
+            backend: ['PHP', 'SQL', 'GEO IP'],
+            automation: ['Bash', 'SSH'],
+            design: ['Figma', 'Data Visualisation'],
+            performance: ['Performance Logging (PHP, JS)'],
+        },
     },
     {
         company: 'Really Simple Plugins',
         role: 'Full Stack Developer',
         startDate: '2021-01',
         endDate: '2025-01',
-        description: 'Ontwerp en ontwikkeling voor Complianz en Really Simple SSL met Figma, React, SCSS en PHP.',
+        description: 'Cruciale rol gespeeld in het verbeteren van de gebruikerservaring van Complianz en Really Simple SSL. Door gebruik van codesplitting en herstructurering van de codebase heb ik de prestaties van de plugins aanzienlijk verbeterd en de onderhoudbaarheid verhoogd.',
         type: 'Part-time',
-        tags: ['React', 'JS', 'PHP', 'HTML', 'SCSS', 'Figma'],
+        tags: {
+            frontend: ['React', 'HTML', 'SCSS', 'Tailwind CSS', 'JS'],
+            backend: ['PHP'],
+            design: ['Figma'],
+        },
     },
     {
         company: 'Hessel de Jong Webdesign',
         role: 'UX/UI Designer & Full Stack Developer',
         startDate: '2018-03',
         endDate: '2023-03',
-        description: 'Eigenaar en uitvoerder van webdesign projecten. Versterkte vaardigheden in Design, PHP, CSS, SQL, JavaScript, klantbeheer en projectbeheer.',
+        description: 'Eigenaar en eindverantwoordelijke voor het ontwerpen en ontwikkelen van websites en maatwerk WordPress-oplossingen voor diverse klanten. Ontwikkelde een systeem met Imagick waarmee weerkaarten automatisch werden gegenereerd op basis van weerdata-API\'s, en deze als transparante PNG\'s werden geleverd aan regionale omroepen zoals RTV Drenthe en RTV Noord.',
         type: 'Full-time',
-        tags: ['PHP', 'CSS', 'SQL', 'JS', 'Webdesign', 'Klantbeheer', 'Projectbeheer'],
+        tags: {
+            frontend: ['HTML', 'CSS', 'JS'],
+            backend: ['PHP', 'SQL', 'Imagick'],
+            management: ['Klantbeheer', 'Projectbeheer'],
+            design: ['UX', 'UI', 'Webdesign'],
+        },
     },
     {
         company: 'Social Blue',
         role: 'UX/UI Designer',
         startDate: '2018-08',
         endDate: '2020-03',
-        description: 'Ontwerp van conversiegerichte funnels met Figma. Verbeterde conversies door UX en psychologie.',
+        description: 'Ontwikkelde conversiegerichte funnels en werkte nauw samen met een Conversie Optimalisatie Specialist om de gebruikerservaring te verbeteren. Door mijn begrip van de psychologie achter ontwerpen zorgde ik voor significante verbeteringen in conversieratio’s en gebruikersbetrokkenheid. Gebruikte Hotjar en VWO om inzichten te verkrijgen en optimalisaties door te voeren.',
         type: 'Freelance',
-        tags: ['Figma', 'UX', 'UI', 'Psychologie', 'Conversie-optimalisatie'],
+        tags: {
+            design: ['Figma','Sketch', 'UX', 'UI'],
+            optimization: ['Psychologie', 'Conversie-optimalisatie', 'Hotjar', 'Visual Website Optimizer'],
+        },
     },
     {
         company: 'Trics Media',
         role: 'Co-owner & Interactive Designer',
         startDate: '2016-10',
         endDate: '2018-03',
-        description: 'Van stagiair tot mede-eigenaar, verantwoordelijk voor klantbeheer, Design, HTML, CSS, PHP, JavaScript, WordPress.',
+        description: 'Startte als stagiair en groeide door naar mede-eigenaar. Verantwoordelijk voor klantrelaties, projectbeheer en het ontwikkelen van interactieve oplossingen die klanten hielpen hun online doelen te bereiken.',
         type: 'Full-time & Stage',
-        tags: ['Klantbeheer', 'Design', 'HTML', 'CSS', 'PHP', 'JavaScript', 'WordPress'],
+        tags: {
+            frontend: ['HTML', 'CSS', 'JS'],
+            backend: ['PHP'],
+            design: ['Adobe Photoshop', 'Sketch', 'WordPress'],
+            management: ['Klantbeheer'],
+        },
     },
     {
         company: 'Netofex BV',
         role: 'Interactive Designer',
         startDate: '2016-06',
         endDate: '2016-09',
-        description: 'Ontwerpen van funnels en landingspagina\'s tijdens de zomervakantie van mijn opleiding.',
-        'type': 'Part-time',
-        tags: ['UX', 'UI', 'Webdesign'],
+        description: 'Werkte tijdens mijn opleiding als ontwerper aan funnels en landingspagina’s, met een focus op het verhogen van conversies en het verbeteren van de algehele gebruikservaring.',
+        type: 'Part-time',
+        tags: {
+            design: ['UX', 'UI', 'Webdesign'],
+        },
     },
     {
         company: 'Aquive Media',
         role: 'Media Designer',
         startDate: '2015-09',
         endDate: '2016-09',
-        description: 'Productfotografie, webdesign, A/B-testen en HTML/CSS-templates voor Magento-webshops.',
+        description: 'Begonnen als stagiair en later aangenomen als part-time designer. Verantwoordelijk voor productfotografie, video’s en het ontwerpen van A/B-testen, wat leidde tot meer conversies en verbeterde klantervaring op Magento-webshops.',
         type: 'Part-time & Stage',
-        tags: ['Webdesign', 'A/B-testen', 'HTML', 'CSS'],
+        tags: {
+            frontend: ['HTML', 'CSS', 'JS'],
+            design: ['Webdesign', 'Fotografie', 'Video'],
+            optimization: ['A/B-testen', 'Hotjar', 'VWO'],
+        },
     }
 ];
+
+
 const education = [
     {
         institution: 'Growth Tribe',
@@ -78,13 +110,6 @@ const education = [
         endDate: '2022-11',
     },
     {
-        institution: 'Noorderpoort',
-        course: 'MBO, Mediavormgeving',
-        type: 'Opleiding',
-        startDate: '2013-09',
-        endDate: '2017-06',
-    },
-    {
         institution: 'X-Panel Ltd',
         course: 'Traineeship Entrepreneurship, innovation, creativity and business planning',
         type: 'Certificaat',
@@ -92,16 +117,23 @@ const education = [
         endDate: '2016-09',
     },
     {
-        institution: 'Ronerborg VMBO',
+        institution: 'Noorderpoort',
+        course: 'MBO Mediavormgeving',
+        type: '',
+        startDate: '2013-09',
+        endDate: '2017-06',
+    },
+    {
+        institution: 'Ronerborg',
         course: 'VMBO',
-        type: 'Opleiding',
+        type: '',
         startDate: '2011-09',
         endDate: '2012-06',
     },
     {
         institution: 'Lindenborg',
         course: 'HAVO',
-        type: 'Opleiding',
+        type: '(Niet afgerond)',
         startDate: '2008-09',
         endDate: '2011-06',
     }
@@ -122,26 +154,38 @@ const projects = [
         tags: ['Fotografie', 'Webdesign'],
     }
 ];
-const skills = () => {
-    // Process job tags
-    jobs.forEach(job => job.tags.forEach(tag => {
-        if (skills[tag]) {
-            skills[tag]++;
-        } else {
-            skills[tag] = 1;
-        }
-    }));
+const collectAllTags = () => {
+    const collectedTags = {};
 
-// Process project tags
-    projects.forEach(project => project.tags.forEach(tag => {
-        if (skills[tag]) {
-            skills[tag]++;
-        } else {
-            skills[tag] = 1;
-        }
-    }));
-    return skills;
-}
+    // Helper function to process tags from jobs or projects
+    const processTags = (tagsObject) => {
+        Object.entries(tagsObject).forEach(([category, tagList]) => {
+            // Initialize the category in collectedTags if it doesn't exist
+            if (!collectedTags[category]) {
+                collectedTags[category] = [];
+            }
+            // Add tags to the corresponding category, avoiding duplicates
+            tagList.forEach(tag => {
+                if (!collectedTags[category].includes(tag)) {
+                    collectedTags[category].push(tag);
+                }
+            });
+        });
+    };
+
+    // Process job tags
+    jobs.forEach(job => {
+        processTags(job.tags);
+    });
+
+    // // Process project tags
+    // projects.forEach(project => {
+    //     processTags(project.tags);
+    // });
+
+    return collectedTags;
+};
+
 // current date in yyyy-mm format
 const yearsOfExperience = getWrittenTimeDifference('2015-09', new Date().toISOString().slice(0, 7) );
 const birthDate = new Date('1996-09-26');
@@ -149,8 +193,8 @@ const age = Math.floor((new Date() - birthDate) / 31557600000);
 
 export default function Home() {
     return (
-        <div className="max-w-6xl mx-auto p-8 my-16 grid grid-cols-cv">
-            <section className="my-4 content-end text-end mb-2 col-span-2 mr-8">
+        <div className="max-w-max mx-auto p-8 my-16 grid md:grid-cols-cv grid-cols-cv-mobile bg-blob bg-no-repeat">
+            <section className="my-4 content-end md:text-end mb-2 col-span-2 col-start-1 mr-8">
                 <h2 className="text-xl font-bold">Hessel de Jong</h2>
                 <ul className="list-none my-3 text-base">
                     <li className={"text-base mb-1"}>info@hesseldejong.com</li>
@@ -158,7 +202,7 @@ export default function Home() {
                     <li className={"text-base mb-1"}>{birthDate.toLocaleDateString('nl-NL')} ({age} jaar)</li>
                 </ul>
             </section>
-            <section className={"col-span-1 col-start-3"}>
+            <section className={"md:col-span-1 col-span-2 md:col-start-3 col-start-1"}>
                 <h2 className="text-2xl font-bold mb-4">
                     Ervaren designer en full stack developer met 9 jaar ervaring en een unieke combinatie van technische
                     en visuele vaardigheden.
@@ -171,36 +215,41 @@ export default function Home() {
                 </p>
             </section>
 
-            <div className={"col-span-2 mb-4 mr-8"}>
-                <h2 className="text-xl font-bold text-end mt-8">Werkervaring</h2>
-                <p className={"font-light text-sm mb-2 text-end"}>{yearsOfExperience}</p>
+            <div className={"md:col-start-1 col-span-2  mb-4 mr-8"}>
+                <h2 className="text-xl font-bold md:text-end mt-8">Werkervaring</h2>
+                <p className={"font-light text-sm mb-2 md:text-end"}>{yearsOfExperience}</p>
             </div>
             <Jobs jobs={jobs}/>
 
-            <div className={"col-span-2 mb-4 mr-8"}>
-                <h2 className="text-xl font-bold text-end mt-8">Opleiding & Certificaten</h2>
+            <div className={'md:col-start-1 col-span-2  mb-4 mr-8'}>
+                <h2 className="text-xl font-bold md:text-end mt-8">Opleiding &
+                    Certificaten</h2>
                 {/*<p className={"font-light text-sm mb-2 text-end"}></p>*/}
             </div>
 
             <Education education={education}/>
 
-            <div className={"col-span-2 mb-4 mr-8"}>
-                <h2 className="text-xl font-bold text-end mt-8">Persoonlijke projecten</h2>
+            <div className={'md:col-start-1 col-span-2  mb-4 mr-8'}>
+                <h2 className="text-xl font-bold md:text-end mt-8">Persoonlijke
+                    projecten</h2>
                 {/*<p className={"font-light text-sm mb-2 text-end"}></p>*/}
             </div>
 
             <Projects projects={projects}/>
 
-            {/*<h2 className="text-xl font-bold text-end mt-6">Programeertalen & tools</h2>*/}
-            {/*<Tools skills={skills()}/>*/}
-
-            <div className={"col-span-2 mb-4 mr-8"}>
-                <h2 className="text-xl font-bold text-end mt-8">Talen</h2>
+            <div className={'md:col-start-1 col-span-2  mb-4 mr-8'}>
+                <h2 className="text-xl font-bold md:text-end mt-8">Programmeertalen & Tools</h2>
                 {/*<p className={"font-light text-sm mb-2 text-end"}></p>*/}
             </div>
-            <ul className="list-none my-2 col-start-3 mt-8">
-                <li>Nederlands: Moedertaal</li>
-                <li>Engels: Vloeiend, zowel schriftelijk als mondeling</li>
+            <Tools skills={collectAllTags()}/>
+
+            <div className={'md:col-start-1 col-span-2  mb-4 mr-8'}>
+                <h2 className="text-xl font-bold md:text-end mt-8">Talen</h2>
+                {/*<p className={"font-light text-sm mb-2 text-end"}></p>*/}
+            </div>
+            <ul className="list-none my-2 md:col-start-3 col-span-2  col-start-1 md:mt-8">
+                <li><span className={"font-bold"}>Nederlands</span>: Moedertaal</li>
+                <li><span className={"font-bold"}>Engels</span>: Vloeiend, zowel schriftelijk als mondeling</li>
             </ul>
         </div>
     );

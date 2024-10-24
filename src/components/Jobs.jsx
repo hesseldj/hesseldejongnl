@@ -1,7 +1,7 @@
 import React from "react";
 
 import {formatDate, getWrittenTimeDifference} from "../utils/date";
-
+import SkillsTags from "./SkillsTags";
 export default function Jobs({jobs}) {
 
     const isLastItem = (index) => {
@@ -11,8 +11,7 @@ export default function Jobs({jobs}) {
         <>
             {jobs.map((item, index) => (
                 <>
-                    <div key={index} className={'col-start-1 text-end mb-2 '}>
-
+                    <div key={index} className={'col-start-1 text-end mb-2 md:block hidden '}>
                         <p className={"text-md font-bold mb-1"}>{formatDate(item.startDate)} - {item.endDate ? formatDate(item.endDate) : 'Heden'}</p>
                         <p className={"font-light text-md"}>{item.type}</p>
                         {/*<p className={"font-light text-sm"}>{getWrittenTimeDifference(item.startDate, item.endDate)}</p>*/}
@@ -28,6 +27,7 @@ export default function Jobs({jobs}) {
                         <p className="text-md font-bold mb-1">{item.role}</p>
                         <p className="text-md font-light mb-2">{item.company}</p>
                         <p className={"text-md"}>{item.description}</p>
+                        <SkillsTags skills={item.tags} />
                     </div>
                 </>
             ))}

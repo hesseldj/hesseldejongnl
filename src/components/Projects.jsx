@@ -10,7 +10,7 @@ export default function Projects({projects}) {
         <>
             {projects.map((item, index) => (
                 <>
-                    <div key={index} className={'col-start-1 text-end mb-2 '}>
+                    <div key={index} className={'col-start-1 text-end mb-2 md:block hidden '}>
 
                         <p className={"text-md font-bold mb-1"}>{formatDate(item.startDate)} - {item.endDate ? formatDate(item.endDate) : 'Heden'}</p>
                         <p className={"font-light text-md"}>{item.type}</p>
