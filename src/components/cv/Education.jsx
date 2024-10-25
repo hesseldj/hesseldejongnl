@@ -1,6 +1,6 @@
 // components/EducationCertifications.js
 import React from 'react';
-import {formatDate} from "../utils/date";
+import {formatDate} from "../../utils/date";
 
 export default function Education({education}) {
         const isLastItem = (index) => {

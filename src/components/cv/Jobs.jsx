@@ -1,6 +1,6 @@
 import React from "react";
 
-import {formatDate, getWrittenTimeDifference} from "../utils/date";
+import {formatDate, getWrittenTimeDifference} from "../../utils/date";
 import SkillsTags from "./SkillsTags";
 export default function Jobs({jobs}) {
 

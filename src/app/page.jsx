@@ -1,9 +1,9 @@
-import Jobs from '../components/Jobs';
-import Education from '../components/Education';
-import Projects from '../components/Projects';
+import Jobs from '../components/cv/Jobs';
+import Education from '../components/cv/Education';
+import Projects from '../components/cv/Projects';
 import React from "react";
 import {getWrittenTimeDifference} from "../utils/date";
-import Tools from '../components/Tools';
+import Tools from '../components/cv/Tools';
 
 const jobs = [
     {
@@ -53,7 +53,7 @@ const jobs = [
         role: 'UX/UI Designer',
         startDate: '2018-08',
         endDate: '2020-03',
-        description: 'Ontwikkelde conversiegerichte funnels en werkte nauw samen met een Conversie Optimalisatie Specialist om de gebruikerservaring te verbeteren. Door mijn begrip van de psychologie achter ontwerpen zorgde ik voor significante verbeteringen in conversieratio’s en gebruikersbetrokkenheid. Gebruikte Hotjar en VWO om inzichten te verkrijgen en optimalisaties door te voeren.',
+        description: 'Ontwikkelde conversiegerichte funnels en werkte nauw samen met een Conversie Optimalisatie Specialist om de gebruikerservaring te verbeteren. Door mijn begrip van de psychologie achter ontwerpen zorgde ik voor significante verbeteringen in conversieratio’s. Gebruikte Hotjar en VWO om inzichten te verkrijgen en optimalisaties door te voeren.',
         type: 'Freelance',
         tags: {
             design: ['Figma','Sketch', 'UX', 'UI'],
@@ -99,8 +99,6 @@ const jobs = [
         },
     }
 ];
-
-
 const education = [
     {
         institution: 'Growth Tribe',
