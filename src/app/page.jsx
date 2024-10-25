@@ -14,11 +14,10 @@ const jobs = [
         description: 'Mede-oprichter van een WordPress analytics-plugin die privacy hoog in het vaandel heeft en momenteel op 300.000+ websites wordt gebruikt. Ontwierp gebruiksvriendelijke interfaces die intuïtief aanvoelen en zorgden voor betere gebruikerservaringen. Optimaliseerde de database en prestaties zodat de plugin naadloos werkt, ongeacht de WordPress-configuratie van de gebruiker. Geïmplementeerd GEO IP databases en automatische build-processen met bash scripts en SSH.',
         type: 'Part-time',
         tags: {
-            frontend: ['React', 'React Query', 'HTML', 'SCSS'],
-            backend: ['PHP', 'SQL', 'GEO IP'],
-            automation: ['Bash', 'SSH'],
+            frontend: ['React', 'HTML', 'SCSS'],
+            backend: ['PHP', 'SQL'],
+            automation: ['Docker', 'SSH', 'Git'],
             design: ['Figma', 'Data Visualisation'],
-            performance: ['Performance Logging (PHP, JS)'],
         },
     },
     {
@@ -32,6 +31,7 @@ const jobs = [
             frontend: ['React', 'HTML', 'SCSS', 'Tailwind CSS', 'JS'],
             backend: ['PHP'],
             design: ['Figma'],
+            performance: ['Performance Logging (PHP, JS)'],
         },
     },
     {
@@ -45,7 +45,7 @@ const jobs = [
             frontend: ['HTML', 'CSS', 'JS'],
             backend: ['PHP', 'SQL', 'Imagick'],
             management: ['Klantbeheer', 'Projectbeheer'],
-            design: ['UX', 'UI', 'Webdesign'],
+            design: ['UX', 'UI'],
         },
     },
     {
@@ -57,12 +57,12 @@ const jobs = [
         type: 'Freelance',
         tags: {
             design: ['Figma','Sketch', 'UX', 'UI'],
-            optimization: ['Psychologie', 'Conversie-optimalisatie', 'Hotjar', 'Visual Website Optimizer'],
+            optimization: ['Conversie-optimalisatie', 'Hotjar', 'Visual Website Optimizer'],
         },
     },
     {
         company: 'Trics Media',
-        role: 'Co-owner & Interactive Designer',
+        role: 'Interactive Designer',
         startDate: '2016-10',
         endDate: '2018-03',
         description: 'Startte als stagiair en groeide door naar mede-eigenaar. Verantwoordelijk voor klantrelaties, projectbeheer en het ontwikkelen van interactieve oplossingen die klanten hielpen hun online doelen te bereiken.',
