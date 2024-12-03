@@ -3,8 +3,9 @@ import Jobs from '../../components/cv/Jobs';
 import Education from '../../components/cv/Education';
 import Projects from '../../components/cv/Projects';
 import Tools from '../../components/cv/Tools';
+import Certifications from '../../components/cv/Certifications';
 import { getWrittenTimeDifference } from "../../utils/date";
-import { jobs, education, projects } from './cvData';
+import { jobs, education, projects, certifications } from './cvData';
 
 const collectAllTags = () => {
     const collectedTags = {};
@@ -72,12 +73,18 @@ export default function Home() {
             <Jobs jobs={jobs}/>
 
             <div className={'md:col-start-1 col-span-2  mb-4 mr-8'}>
-                <h2 className="text-xl font-bold md:text-end mt-8">Opleiding &
-                    Certificaten</h2>
+                <h2 className="text-xl font-bold md:text-end mt-8">Certificaten</h2>
                 {/*<p className={"font-light text-sm mb-2 text-end"}></p>*/}
             </div>
+            <Certifications certifications={certifications}/>
 
+            <div className={'md:col-start-1 col-span-2  mb-4 mr-8'}>
+                <h2 className="text-xl font-bold md:text-end mt-8">Opleidingen</h2>
+                {/*<p className={"font-light text-sm mb-2 text-end"}></p>*/}
+            </div>
             <Education education={education}/>
+
+           
 
             <div className={'md:col-start-1 col-span-2  mb-4 mr-8'}>
                 <h2 className="text-xl font-bold md:text-end mt-8">Persoonlijke

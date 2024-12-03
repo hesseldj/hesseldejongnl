@@ -2,13 +2,13 @@
 import React from 'react';
 import {formatDate} from "../../utils/date";
 
-export default function Education({education}) {
+export default function Certifications({certifications}) {
         const isLastItem = (index) => {
-            return index === education.length - 1;
+            return index === certifications.length - 1;
         }
         return (
             <>
-                {education.map((item, index) => (
+                {certifications.map((item, index) => (
                     <>
                       <div key={index}
                            className={'col-start-1 text-end mb-2 md:block hidden '}>
