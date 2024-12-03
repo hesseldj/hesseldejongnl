@@ -16,15 +16,15 @@
 body {
     background: #ffffff;
     color: var(--hdj-black);
-    font-family: var(--font-lato);
+    font-family: var(--font-lato, sans-serif);
+}
 
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--hdj-primary);
-        font-family: var(--font-lato);
-    }
+h1, h2, h3, h4, h5, h6 {
+    color: var(--hdj-primary);
+    font-family: var(--font-dosis, sans-serif);
+}
 
-    p, a, li {
-        font-family: var(--font-lato);
-        color: var(--hdj-black);
-    }
+p, a, li {
+    font-family: var(--font-lato, sans-serif);
+    color: var(--hdj-black);
 }
